@@ -6,6 +6,16 @@
   <base href="/"> 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script>
+    Object.defineProperty(Array.prototype, 'chunk', {
+        value: function(chunkSize) {
+            var R = [];
+            for (var i=0; i<this.length; i+=chunkSize)
+                R.push(this.slice(i,i+chunkSize));
+            return R;
+        }
+    });
+  </script>
 </head>
 <body>
   <app-root></app-root>

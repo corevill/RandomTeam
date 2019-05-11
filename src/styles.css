@@ -5,3 +5,11 @@
     width: 100%;
 }
  
+body .ui-chips > ul.ui-inputtext .ui-chips-token {
+    background: #e45536 !important; 
+}
+
+body .ui-button {
+    background-color: #b71c0f !important;
+    border: 1px solid #c02212 !important;
+}

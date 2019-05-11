@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms';
 import {ChipsModule} from 'primeng/chips';
 import {SliderModule} from 'primeng/slider';
 import {ButtonModule} from 'primeng/button';
-
+import {TableModule} from 'primeng/table';
 
 import { AppComponent } from './app.component';
 
@@ -20,7 +20,8 @@ import { AppComponent } from './app.component';
     ChipsModule,
     SliderModule,
     FormsModule,
-    ButtonModule
+    ButtonModule,
+    TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
