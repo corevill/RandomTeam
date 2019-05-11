@@ -1,11 +1,15 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
+  <h1>Welcome to {{ title }}!</h1>
   <img width="300" alt="Angular Logo" src="./../assets/images/logo.png">
 </div>
-<div style="text-align:center">
+<div style="text-align:center; width: 50%; margin: 0 auto;">
+  <h3 class="first">Players:</h3>
+  <p-chips [inputStyleClass]="chips-player" (onAdd)="onPlayersChange()" (onRemove)="onPlayersChange()" [(ngModel)]="players" [allowDuplicate]="false" ></p-chips>
   
-  
+  <h3>Number of teams ({{maxTeams}} max): {{val2}}</h3>
+  <div style="display: inline-block;">
+    <input type="number" [disabled]="players.length === 0" pInputText [max]="maxTeams" [min]="1" [(ngModel)]="numberOfTeams" style="width:14em"/><br>
+    
+  <button style="margin: 10px" [disabled]="players.length === 0 || numberOfTeams > maxTeams || numberOfTeams === null"  pButton type="button" icon="pi pi-check" label="Create Teams"></button>
 </div>
